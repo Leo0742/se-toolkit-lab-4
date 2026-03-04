@@ -34,7 +34,7 @@ async def get_interactions(
             "learner_id": log.learner_id,
             "item_id": log.item_id,
             "kind": log.kind,
-            "timestamp": log.created_at,
+            "created_at": log.created_at,
         }
         for log in interactions
     ]
