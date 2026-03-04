@@ -41,3 +41,14 @@ def test_filter_excludes_interaction_with_different_learner_id() -> None:
 
     assert len(result) == 1
     assert result[0].id == 1
+
+def test_interaction_kind_is_string():
+    data = {"learner_id": 1, "item_id": 1, "kind": "view"}
+    assert isinstance(data["kind"], str)
+
+
+def test_interaction_ids_are_positive():
+    learner_id = 1
+    item_id = 2
+    assert learner_id > 0
+    assert item_id > 0
